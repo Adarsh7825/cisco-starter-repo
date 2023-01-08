@@ -1,0 +1,53 @@
+{
+  "name": "vows",
+  "version": "1.0.0-alpha.1",
+  "license": "Apache-2.0",
+  "description": "testing framework",
+  "keywords": [
+    "unit test",
+    "vows",
+    "test"
+  ],
+  "author": {
+    "name": "Evan Prodromou",
+    "email": "evan@fuzzy.ai"
+  },
+  "main": "lib/index.js",
+  "bin": "./bin/vows.js",
+  "scripts": {
+    "lint": "eslint bin/*.js lib/*.js test/*.js",
+    "test": "node test/standalone.js && node bin/vows.js test/test-*",
+    "test-coverage": "nyc -r lcov npm test"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": [
+    "bin/*",
+    "lib/*",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": "vowsjs/vows",
+  "dependencies": {
+    "async": "^3.2.0",
+    "coffeescript": "^1.12.7",
+    "debug": "^4.1.1",
+    "lodash": "^4.17.11",
+    "yargs": "^11.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nyc": "^15.1.0",
+    "util-promisify": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=9 <=14"
+  }
+}
